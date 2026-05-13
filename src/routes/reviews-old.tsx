@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Quote } from "lucide-react";
 
-export const Route = createFileRoute("/reviews")({
+export const Route = createFileRoute("/reviews-old")({
   head: () => ({
     meta: [
       { title: "Clients & Testimonials — Ali Raza Creations" },

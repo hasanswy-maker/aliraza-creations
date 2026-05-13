@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Film, Layers, Music, Sparkles } from "lucide-react";
 
-export const Route = createFileRoute("/about")({
+export const Route = createFileRoute("/about-old")({
   head: () => ({
     meta: [
       { title: "About — Ali Raza Creations" },

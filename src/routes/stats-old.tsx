@@ -1,17 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Film, Layers, Music, Quote, Sparkles } from "lucide-react";
 import {
-  ArrowRight,
-  Film,
-  Layers,
-  Music,
-  Quote,
-  Sparkles,
-} from "lucide-react";
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+} from "recharts";
 
 import { VideoTile } from "../components/video-tile";
 import { sampleVideos } from "../lib/sample-videos";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/stats-old")({
   head: () => ({
     meta: [
       { title: "Ali Raza Creations" },
@@ -24,13 +26,6 @@ export const Route = createFileRoute("/")({
   }),
   component: HomePage,
 });
-
-const heroStats = [
-  { value: "20M+", label: "Total Views" },
-  { value: "700", label: "Total Projects Done" },
-  { value: "60+", label: "Creators Edited For" },
-  { value: "+38%", label: "Avg. Watch-Time Lift" },
-];
 
 const tools = [
   { name: "Premiere Pro", icon: Film },
@@ -138,80 +133,26 @@ const monthly = [
 ];
 
 const big = [
-  { value: "20M+", label: "Total Views" },
-  { value: "700", label: "Total Projects Done" },
-  { value: "60+", label: "Creators Edited For" },
-  { value: "+38%", label: "Avg. Watch-Time Lift" },
+  { v: "2.4B+", l: "Total views (lifetime)" },
+  { v: "147", l: "Videos over 1M views" },
+  { v: "23", l: "Videos over 10M views" },
+  { v: "+38%", l: "Avg watch-time lift" },
 ];
 
 function HomePage() {
-  const maxViews = Math.max(...monthly.map((m) => m.views));
-
   return (
     <main>
-      <section
-        id="home"
-        className="mx-auto flex min-h-[calc(100vh-81px)] max-w-7xl scroll-mt-28 flex-col justify-center px-6 py-24"
-      >
-        <div className="max-w-5xl">
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">
-            Short-form video editor
-          </div>
-
-          <h1 className="mt-4 font-display text-7xl leading-[0.85] md:text-8xl lg:text-9xl">
-            We edit shorts
-            <br />
-            that hit <span className="text-gradient-neon">millions.</span>
-          </h1>
-
-          <p className="mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Vertical video editor for creators and brands who refuse to be
-            skipped. Hook in 1.5 seconds. Hold to the last frame. Loop them back
-            in.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-
-
-            <a
-              href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold text-foreground transition-colors hover:bg-muted"
-            >
-              Get a Quote
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-4">
-          {heroStats.map((stat) => (
-            <div key={stat.label} className="bg-background p-6 md:p-8">
-              <div className="font-display text-5xl text-foreground">
-                {stat.value}
-              </div>
-              <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="portfolio"
-        className="mx-auto max-w-7xl scroll-mt-28 px-6 py-20"
-      >
+      {/* PORTFOLIO */}
+      <section id="portfolio" className="mx-auto max-w-7xl px-6 py-20">
         <div className="text-xs uppercase tracking-widest text-muted-foreground">
           The Work
         </div>
 
-        <h2 className="mt-2 font-display text-6xl leading-[0.9] md:text-7xl">
+        <h1 className="mt-2 font-display text-6xl leading-[0.9] md:text-7xl">
           Selected cuts.
           <br />
           <span className="text-gradient-neon">Real numbers.</span>
-        </h2>
+        </h1>
 
         <p className="mt-4 max-w-2xl text-muted-foreground">
           A rolling archive of edits.
@@ -222,72 +163,16 @@ function HomePage() {
             <VideoTile key={v.id} item={v} index={i} />
           ))}
         </div>
+
+        {sampleVideos.length === 0 && (
+          <div className="mt-20 text-center text-muted-foreground">
+            No videos yet.
+          </div>
+        )}
       </section>
 
-      <section
-        id="reviews"
-        className="mx-auto max-w-7xl scroll-mt-28 px-6 py-20"
-      >
-        <div className="text-xs uppercase tracking-widest text-muted-foreground">
-          Clients & Testimonials
-        </div>
-
-        <h2 className="mt-2 max-w-4xl font-display text-6xl leading-[0.95] md:text-7xl">
-          Receipts from{" "}
-          <span className="text-gradient-neon">the people I edit for.</span>
-        </h2>
-
-        <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {quotes.map((q) => (
-            <div
-              key={q.name}
-              className="group relative rounded-3xl border border-border bg-card p-7 transition-colors hover:border-neon/60"
-            >
-              <Quote className="h-8 w-8 text-neon" />
-              <p className="mt-4 text-foreground">"{q.quote}"</p>
-
-              <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
-                <div>
-                  <div className="font-semibold">{q.name}</div>
-                  <div className="text-xs text-muted-foreground">
-                    {q.handle} · {q.followers}
-                  </div>
-                </div>
-
-                <div className="rounded-full bg-neon/10 px-3 py-1 text-xs font-semibold text-neon">
-                  {q.lift}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-24">
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">
-            Brands & creators
-          </div>
-
-          <h2 className="mt-2 font-display text-4xl">
-            A few names you might know.
-          </h2>
-
-          <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4 lg:grid-cols-6">
-            {logos.map((l) => (
-              <div
-                key={l}
-                className="grid h-24 place-items-center bg-background font-display text-base text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
-              >
-                {l}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="about"
-        className="mx-auto max-w-6xl scroll-mt-28 px-6 py-20"
-      >
+      {/* ABOUT */}
+      <section id="about" className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
           <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-neon/30 via-accent/20 to-surface shadow-elevated">
             <div className="absolute inset-0 grid place-items-center font-display text-9xl text-foreground/10">
@@ -312,11 +197,13 @@ function HomePage() {
                 and brands. I've shipped over 4,000 vertical videos and watched
                 a lot of retention curves.
               </p>
+
               <p>
                 My philosophy is simple: the algorithm doesn't care about your
                 edit. The viewer does. I cut for the human watching with their
                 thumb already moving.
               </p>
+
               <p>
                 I work async, I don't ghost, and I treat your channel like it's
                 mine.
@@ -348,7 +235,9 @@ function HomePage() {
             Process
           </div>
 
-          <h2 className="mt-2 font-display text-5xl">How it goes.</h2>
+          <h2 className="mt-2 font-display text-5xl md:text-5xl">
+            How it goes.
+          </h2>
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((s) => (
@@ -359,7 +248,9 @@ function HomePage() {
                 <div className="font-display text-5xl text-gradient-neon">
                   {s.n}
                 </div>
+
                 <div className="mt-3 font-display text-2xl">{s.t}</div>
+
                 <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
               </div>
             ))}
@@ -367,10 +258,68 @@ function HomePage() {
         </div>
       </section>
 
-      <section
-        id="stats"
-        className="mx-auto max-w-7xl scroll-mt-28 px-6 py-20"
-      >
+      {/* REVIEWS */}
+      <section id="reviews" className="mx-auto max-w-7xl px-6 py-20">
+        <div className="text-xs uppercase tracking-widest text-muted-foreground">
+          Clients & Testimonials
+        </div>
+
+        <h2 className="mt-2 max-w-4xl font-display text-6xl leading-[0.95] md:text-7xl">
+          Receipts from{" "}
+          <span className="text-gradient-neon">the people I edit for.</span>
+        </h2>
+
+        <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {quotes.map((q) => (
+            <div
+              key={q.name}
+              className="group relative rounded-3xl border border-border bg-card p-7 transition-colors hover:border-neon/60"
+            >
+              <Quote className="h-8 w-8 text-neon" />
+
+              <p className="mt-4 text-foreground">"{q.quote}"</p>
+
+              <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
+                <div>
+                  <div className="font-semibold">{q.name}</div>
+
+                  <div className="text-xs text-muted-foreground">
+                    {q.handle} · {q.followers}
+                  </div>
+                </div>
+
+                <div className="rounded-full bg-neon/10 px-3 py-1 text-xs font-semibold text-neon">
+                  {q.lift}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-24">
+          <div className="text-xs uppercase tracking-widest text-muted-foreground">
+            Brands & creators
+          </div>
+
+          <h2 className="mt-2 font-display text-4xl md:text-4xl">
+            A few names you might know.
+          </h2>
+
+          <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4 lg:grid-cols-6">
+            {logos.map((l) => (
+              <div
+                key={l}
+                className="grid h-24 place-items-center bg-background font-display text-base text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
+              >
+                {l}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATS */}
+      <section id="stats" className="mx-auto max-w-7xl px-6 py-20">
         <div className="text-xs uppercase tracking-widest text-muted-foreground">
           By the numbers
         </div>
@@ -382,9 +331,10 @@ function HomePage() {
         <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-4">
           {big.map((s) => (
             <div key={s.l} className="bg-background p-6 md:p-8">
-              <div className="font-display text-5xl text-foreground">
+              <div className="font-display text-5xl text-foreground md:text-5xl">
                 {s.v}
               </div>
+
               <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">
                 {s.l}
               </div>
@@ -396,26 +346,91 @@ function HomePage() {
           <div className="flex items-end justify-between">
             <div>
               <div className="text-xs uppercase tracking-widest text-muted-foreground">
-                Monthly views
+                Monthly views (millions)
               </div>
-              <div className="mt-1 font-display text-3xl">Last 12 months</div>
+
+              <div className="mt-1 font-display text-3xl md:text-3xl">
+                Last 12 months
+              </div>
             </div>
+
             <div className="text-sm text-neon">+571% YoY</div>
           </div>
 
-          <div className="mt-8 flex h-72 items-end gap-3">
-            {monthly.map((m) => (
-              <div key={m.month} className="flex h-full flex-1 flex-col justify-end gap-2">
-                <div
-                  className="rounded-t-lg bg-gradient-neon"
-                  style={{ height: `${(m.views / maxViews) * 100}%` }}
-                  title={`${m.month}: ${m.views}M`}
+          <div className="mt-6 h-72">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={monthly}>
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+                    <stop
+                      offset="0%"
+                      stopColor="oklch(0.72 0.27 340)"
+                      stopOpacity={0.7}
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="oklch(0.72 0.27 340)"
+                      stopOpacity={0}
+                    />
+                  </linearGradient>
+                </defs>
+
+                <CartesianGrid stroke="oklch(1 0 0 / 0.06)" vertical={false} />
+
+                <XAxis
+                  dataKey="month"
+                  stroke="oklch(0.68 0.02 285)"
+                  tickLine={false}
+                  axisLine={false}
                 />
-                <div className="text-center text-xs text-muted-foreground">
-                  {m.month}
-                </div>
-              </div>
-            ))}
+
+                <YAxis
+                  stroke="oklch(0.68 0.02 285)"
+                  tickLine={false}
+                  axisLine={false}
+                />
+
+                <Tooltip
+                  contentStyle={{
+                    background: "oklch(0.17 0.015 285)",
+                    border: "1px solid oklch(1 0 0 / 0.1)",
+                    borderRadius: 12,
+                    color: "oklch(0.97 0.005 285)",
+                  }}
+                  cursor={{
+                    stroke: "oklch(0.72 0.27 340)",
+                    strokeWidth: 1,
+                  }}
+                />
+
+                <Area
+                  type="monotone"
+                  dataKey="views"
+                  stroke="oklch(0.78 0.28 340)"
+                  strokeWidth={2.5}
+                  fill="url(#g)"
+                />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        <div className="mt-20">
+          <div className="text-xs uppercase tracking-widest text-muted-foreground">
+            Top 5 viral hits
+          </div>
+
+          <h2 className="mt-2 font-display text-5xl md:text-5xl">
+            Greatest hits.
+          </h2>
+
+          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-5">
+            {[...sampleVideos]
+              .sort((a, b) => parseFloat(b.views) - parseFloat(a.views))
+              .slice(0, 5)
+              .map((v, i) => (
+                <VideoTile key={v.id} item={v} index={i} />
+              ))}
           </div>
         </div>
       </section>

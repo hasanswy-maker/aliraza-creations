@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { VideoTile } from "../components/video-tile";
 import { sampleVideos } from "../lib/sample-videos";
 
-export const Route = createFileRoute("/portfolio")({
+export const Route = createFileRoute("/portfolio-old")({
   head: () => ({
     meta: [
       { title: "Work — Ali Raza Creations" },

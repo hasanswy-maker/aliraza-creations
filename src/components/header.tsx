@@ -1,75 +1,93 @@
-import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png"; 
+import logo from "@/assets/logo.png";
+
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/portfolio", label: "Portfolio" },
-  // { to: "/stats", label: "Stats" },
-  // { to: "/services", label: "Services" },
-  { to: "/reviews", label: "Reviews" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#reviews", label: "Reviews" },
+  { href: "/#about", label: "About" },
+  { href: "/#stats", label: "Stats" },
 ] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-<Link to="/" className="group flex items-center gap-3">
-  <img
-    src={logo}
-    alt="Ali Raza Creations Logo"
-    className="h-12 w-auto object-contain"
-  />
+        
+        {/* Logo */}
+        <a href="#" className="group flex items-center gap-3">
+          <img
+            src={logo}
+            alt="Ali Raza Creations Logo"
+            className="h-12 w-auto object-contain"
+          />
 
-  <span className="font-display text-xl tracking-wider">
-    ALI RAZA CREATIONS
-  </span>
-</Link>
+          <span className="font-display text-xl tracking-wider">
+            ALI RAZA CREATIONS
+          </span>
+        </a>
+
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              activeOptions={{ exact: l.to === "/" }}
+            <a
+              key={l.href}
+              href={l.href}
               className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "rounded-md px-3 py-2 text-sm text-foreground" }}
             >
               {l.label}
-            </Link>
+            </a>
           ))}
         </nav>
-        <Link
-          to="/contact"
+
+        {/* Hire Me Button */}
+        <a
+          href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded-full bg-gradient-neon px-5 py-2 text-sm font-semibold text-primary-foreground shadow-neon transition-transform hover:scale-105 md:inline-block"
         >
           Hire Me
-        </Link>
+        </a>
+
+        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground"
+          className="text-foreground md:hidden"
           onClick={() => setOpen((o) => !o)}
           aria-label="Toggle menu"
         >
           {open ? <X /> : <Menu />}
         </button>
       </div>
+
+      {/* Mobile Navigation */}
       {open && (
         <div className="border-t border-border/50 bg-background/95 md:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
             {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
+              <a
+                key={l.href}
+                href={l.href}
                 onClick={() => setOpen(false)}
-                className="py-3 text-sm text-muted-foreground"
-                activeProps={{ className: "py-3 text-sm text-foreground" }}
+                className="py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
-              </Link>
+              </a>
             ))}
+
+            {/* Mobile Hire Me Button */}
+            <a
+              href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 rounded-full bg-gradient-neon px-5 py-3 text-center text-sm font-semibold text-primary-foreground shadow-neon"
+            >
+              Hire Me
+            </a>
           </nav>
         </div>
       )}
