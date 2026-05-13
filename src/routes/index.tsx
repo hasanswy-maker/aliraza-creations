@@ -380,16 +380,16 @@ function HomePage() {
         </h2>
 
         <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-4">
-          {big.map((s) => (
-            <div key={s.l} className="bg-background p-6 md:p-8">
-              <div className="font-display text-5xl text-foreground">
-                {s.v}
-              </div>
-              <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">
-                {s.l}
-              </div>
-            </div>
-          ))}
+{big.map((s) => (
+  <div key={s.label} className="bg-background p-6 md:p-8">
+    <div className="font-display text-5xl text-foreground">
+      {s.value}
+    </div>
+    <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">
+      {s.label}
+    </div>
+  </div>
+))}
         </div>
 
         <div className="mt-16 rounded-3xl border border-border bg-card p-6 md:p-8">
