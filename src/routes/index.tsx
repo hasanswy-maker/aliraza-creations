@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
 
 const heroStats = [
   { value: "20M+", label: "Total Views" },
-  { value: "700", label: "Total Projects Done" },
+  { value: "700+", label: "Total Projects Done" },
   { value: "60+", label: "Creators Edited For" },
   { value: "+38%", label: "Avg. Watch-Time Lift" },
 ];
@@ -139,7 +139,7 @@ const monthly = [
 
 const big = [
   { value: "20M+", label: "Total Views" },
-  { value: "700", label: "Total Projects Done" },
+  { value: "700+", label: "Total Projects Done" },
   { value: "60+", label: "Creators Edited For" },
   { value: "+38%", label: "Avg. Watch-Time Lift" },
 ];
