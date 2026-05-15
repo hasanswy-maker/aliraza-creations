@@ -5,7 +5,7 @@ export const sampleVideos: VideoItem[] = [
     id: "v1",
     title: "Instagram Reel",
     views: "4.2M",
-    platform: "TikTok",
+    platform: "Reels",
     niche: "Fitness",
     poster: "oklch(0.45 0.22 340)",
     video: "src/assets/InstagramReel.mp4",
