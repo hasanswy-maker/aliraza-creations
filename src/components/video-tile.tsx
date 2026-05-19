@@ -66,7 +66,7 @@ export function VideoTile({
         </div>
 
         <div className="mt-1 text-xs text-white/70">
-          {item.platform} • {item.niche} • {item.views}
+          {/* {item.platform} • {item.niche} • {item.views} */}
         </div>
       </div>
     </motion.div>
