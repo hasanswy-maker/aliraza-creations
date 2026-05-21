@@ -8,7 +8,7 @@ export const sampleVideos: VideoItem[] = [
     platform: "Reels",
     niche: "Fitness",
     poster: "oklch(0.45 0.22 340)",
-    video: "public/videos/ReelforMasterclass.m4v",
+    video: "/videos/ReelforMasterclass.m4v",
   },
   {
     id: "v2",
@@ -17,7 +17,7 @@ export const sampleVideos: VideoItem[] = [
     platform: "Reels",
     niche: "Comedy",
     poster: "oklch(0.5 0.2 200)",
-    video: "public/videos/KeytoSuccsess.m4v",
+    video: "/videos/KeytoSuccsess.m4v",
   },
   {
     id: "v3",
