@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Menu, X,ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import logo from "@/assets/logo.png";
-
 
 const links = [
   { href: "/", label: "Home" },
@@ -26,7 +25,13 @@ export function Header() {
             className="h-12 w-auto object-contain"
           />
 
-          <span className="font-display text-xl tracking-wider">
+          <span
+            className="text-xl uppercase tracking-[0.08em]"
+            style={{
+              fontFamily: '"Arial Narrow", Arial, sans-serif',
+              fontWeight: 700,
+            }}
+          >
             ALI RAZA CREATIONS
           </span>
         </a>
@@ -44,16 +49,17 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Hire Me Button */}
-            <a
-              href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold text-foreground transition-colors hover:bg-muted"
-            >
-              Get a Quote
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+        {/* Desktop Get a Quote Button */}
+        <a
+          href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group hidden md:inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+        >
+          <span className="text-gradient-neon">Get a Quote</span>
+
+          <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -80,14 +86,17 @@ export function Header() {
               </a>
             ))}
 
-            {/* Mobile Hire Me Button */}
+            {/* Mobile Get a Quote Button */}
             <a
               href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 rounded-full bg-gradient-neon px-5 py-3 text-center text-sm font-semibold text-primary-foreground shadow-neon"
+              onClick={() => setOpen(false)}
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-semibold transition-colors hover:bg-muted"
             >
-              Hire Me
+              <span className="text-gradient-neon">Get a Quote</span>
+
+              <ArrowRight className="h-4 w-4 text-[#ff2bd6]" />
             </a>
           </nav>
         </div>

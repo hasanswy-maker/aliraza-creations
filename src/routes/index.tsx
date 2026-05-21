@@ -44,73 +44,93 @@ const steps = [
   {
     n: "01",
     t: "Brief",
-    d: "We talk about the channel, the goal, and the audience. I review raw footage and references.",
+    d: "We discuss your project in detail. Gather all data for the project. Discuss the payment. And start working right way.",
   },
   {
     n: "02",
-    t: "Hook",
-    d: "I draft 3 different opening hooks. We pick the one that breaks the scroll.",
+    t: "Editing",
+    d: "I do the magic where it all happens, following everything as discussed.",
   },
   {
     n: "03",
-    t: "Cut",
-    d: "First draft within 48h. Pacing tuned to retention curves, not gut feel.",
+    t: "Delivery",
+    d: "I deliver your project. You review the delivery and share the feedback, I do the revisions if needed and deliver you the final version of your project.",
   },
-  {
-    n: "04",
-    t: "Polish",
-    d: "Sound design, captions, color, motion. Export. Ship. Watch it climb.",
-  },
+
 ];
 
 const quotes = [
   {
-    name: "Maya R.",
-    handle: "@mayalifts",
-    followers: "3.2M",
-    lift: "+412% avg views",
+    name: "jordanabe",
+    handle: "South Korea",
+    followers: "1 month ago",
+    lift: "5 stars",
     quote:
-      "Ali turned my dead channel into a 3M follower machine in eight months. The hooks alone are worth the retainer.",
+      "Working with Ali was better than expected. I ran into an issue about budget but Ali was nice enough to cooperate with me despite that! The work that he had put into the video was quite amazing! He would even check in with me to make sure that details and order I wanted for the video were included.",
   },
   {
-    name: "Devon K.",
-    handle: "@devonbuilds",
-    followers: "880K",
-    lift: "+220% retention",
+    name: "kr0508",
+    handle: "United States",
+    followers: "2 weeks ago",
+    lift: "5 stars",
     quote:
-      "I've worked with five editors. Nobody else makes me look this fast and this clean. Period.",
+      "Overall Experience: The collaboration was smooth and productive. The freelancer demonstrated a strong understanding of content creation, particularly in transforming podcast material into engaging short-form videos. Professionalism of Work The quality of work was solid and consistent.",
   },
   {
-    name: "PRIME LABS",
-    handle: "@primelabs",
-    followers: "1.4M",
-    lift: "12 viral hits in Q1",
+    name: "dejsangowawa",
+    handle: "United Kingdom",
+    followers: "1 month ago",
+    lift: "5 stars",
     quote:
-      "Our paid social CPMs dropped 38% after switching to organic-style edits from Ali. It just works.",
+      "Amazing work from Ali despite immense pressure from me to make it work. I want to recommend him to anyone who is looking for professional sleek video editing. He understands what to do with minimal supervision and just a small reference.",
   },
   {
-    name: "Jules A.",
-    handle: "@julesattheparty",
-    followers: "2.1M",
-    lift: "+1.8B total views",
+    name: "vlckysl630",
+    handle: "Canada",
+    followers: "1 month ago",
+    lift: "5 stars",
     quote:
-      "Async, on time, brilliant taste. I never have to explain a reference twice.",
+      "I had an amazing experience working with Ali. From start to finish, everything was handled professionally and efficiently. The quality of the edits was top-tier, clean cuts, great pacing, and a strong understanding of what makes short-form content engaging.",
   },
   {
-    name: "NEON FM",
-    handle: "@neonfm",
-    followers: "640K",
-    lift: "+5x repost rate",
+    name: "kellzjr",
+    handle: "United States",
+    followers: "3 weeks ago",
+    lift: "5 stars",
     quote:
-      "Ali understands music edits in a way most editors don't. The transitions hit like the drop.",
+      "Super easy to work with and has amazing prices. You can tell he enjoys making art for his clients! I want to work with him in the future for my content.",
   },
   {
-    name: "Theo L.",
-    handle: "@theotalksmoney",
-    followers: "1.1M",
-    lift: "First 10M-view video",
+    name: "comfortobadna",
+    handle: "United States",
+    followers: "1 month ago",
+    lift: "5 stars",
     quote:
-      "Sent him a rambling 18-minute monologue. He gave me back the best 47 seconds of my life.",
+      "Ali waa very patient, easy to work with and highly receptive to feedback. He made multiple revisions without an issue and delivered beyond my expectations. Highly recommend!",
+  },
+  {
+    name: "washingmonkey",
+    handle: "United States",
+    followers: "1 month ago",
+    lift: "5 stars",
+    quote:
+      "I had a lot of different things I wanted him to do and he exceeding my expectations!",
+  },
+  {
+    name: "fhedlger92",
+    handle: "Switzerland",
+    followers: "1 month ago",
+    lift: "5 stars",
+    quote:
+      "Thanks a lot for the great work. Quick turnaround and high quality video.",
+  },
+  {
+    name: "salamama",
+    handle: "United States",
+    followers: "3 months ago",
+    lift: "5 stars",
+    quote:
+      "Ali made two versions of the video I sent him and both were absolutely amazing. His attention to detail and his dedication to providing an exceptional and ideal product were unmatched. Highly recommend him for your next video editing project!",
   },
 ];
 
@@ -158,11 +178,18 @@ function HomePage() {
             Short-form video editor
           </div>
 
-          <h1 className="mt-4 font-display text-7xl leading-[0.85] md:text-8xl lg:text-9xl">
-            We edit shorts
-            <br />
-            that hit <span className="text-gradient-neon">millions.</span>
-          </h1>
+<h1
+  className="mt-4 text-7xl leading-[0.88] uppercase md:text-8xl lg:text-9xl"
+  style={{
+    fontFamily: '"Arial Narrow", Arial, sans-serif',
+    letterSpacing: "-0.03em",
+    fontWeight: 700,
+  }}
+>
+  We edit shorts
+  <br />
+  that hit <span className="text-gradient-neon">millions.</span>
+</h1>
 
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
             Vertical video editor for creators and brands who refuse to be
@@ -173,15 +200,15 @@ function HomePage() {
           <div className="mt-10 flex flex-wrap gap-4">
 
 
-            <a
-              href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold text-foreground transition-colors hover:bg-muted"
-            >
-              Get a Quote
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+<a
+  href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+>
+  <span className="text-gradient-neon">Get a Quote</span>
+  <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+</a>
           </div>
         </div>
 
@@ -199,30 +226,43 @@ function HomePage() {
         </div>
       </section>
 
-      <section
-        id="portfolio"
-        className="mx-auto max-w-7xl scroll-mt-28 px-6 py-20"
-      >
-        <div className="text-xs uppercase tracking-widest text-muted-foreground">
-          The Work
-        </div>
+<section
+  id="portfolio"
+  className="mx-auto max-w-7xl scroll-mt-28 px-6 py-20"
+>
+  <div className="text-xs uppercase tracking-widest text-muted-foreground">
+    The Work
+  </div>
 
-        <h2 className="mt-2 font-display text-6xl leading-[0.9] md:text-7xl">
-          Selected cuts.
-          <br />
-          <span className="text-gradient-neon">Real numbers.</span>
-        </h2>
+ <div className="mt-2 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+    <h2 className="font-display text-6xl leading-[0.9] md:text-7xl">
+      Selected cuts.
+      <br />
+      <span className="text-gradient-neon">Real numbers.</span>
+    </h2>
 
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          A rolling archive of edits.
-        </p>
+    <a
+      href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group inline-flex h-fit items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+    >
+      <span className="text-gradient-neon">Get a Quote</span>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          {sampleVideos.map((v, i) => (
-            <VideoTile key={v.id} item={v} index={i} />
-          ))}
-        </div>
-      </section>
+      <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+    </a>
+  </div>
+
+  <p className="mt-4 max-w-2xl text-muted-foreground">
+    A rolling archive of edits.
+  </p>
+
+  <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+    {sampleVideos.map((v, i) => (
+      <VideoTile key={v.id} item={v} index={i} />
+    ))}
+  </div>
+</section>
 
       <section
         id="reviews"
@@ -232,10 +272,25 @@ function HomePage() {
           Clients & Testimonials
         </div>
 
-        <h2 className="mt-2 max-w-4xl font-display text-6xl leading-[0.95] md:text-7xl">
-          Receipts from{" "}
-          <span className="text-gradient-neon">the people I edit for.</span>
-        </h2>
+<div className="mt-2 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+  <h2 className="max-w-4xl font-display text-6xl leading-[0.95] md:text-7xl">
+    Receipts from{" "}
+    <span className="text-gradient-neon">
+      the people I edit for.
+    </span>
+  </h2>
+
+  <a
+    href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group inline-flex h-fit items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+  >
+    <span className="text-gradient-neon">Get a Quote</span>
+
+    <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+  </a>
+</div>
 
         <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {quotes.map((q) => (
@@ -262,26 +317,41 @@ function HomePage() {
           ))}
         </div>
 
-        <div className="mt-24">
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">
-            Brands & creators
-          </div>
+<div className="mt-24">
+  <h2
+className="mt-2 text-4xl leading-tight"
+    style={{
+      fontFamily: '"Arial Narrow", Arial, sans-serif',
+      fontWeight: 700,
+      letterSpacing: "-0.03em",
+    }}
+  >
+    <span className="text-gradient-neon">Creators</span> and{" "}
+    <span className="text-gradient-neon">Brands</span> I've worked with
+  </h2>
 
-          <h2 className="mt-2 font-display text-4xl">
-            A few names you might know.
-          </h2>
-
-          <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4 lg:grid-cols-6">
-            {logos.map((l) => (
-              <div
-                key={l}
-                className="grid h-24 place-items-center bg-background font-display text-base text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
-              >
-                {l}
-              </div>
-            ))}
-          </div>
+  <div className="relative mt-8 overflow-hidden rounded-2xl border border-border bg-border">
+    <div className="flex w-max animate-marquee">
+      {[
+        ...logos,  
+        ...logos,
+      ].map((l, i) => (
+        <div
+          key={`${l}-${i}`}
+          className="flex h-24 min-w-[220px] items-center justify-center border-r border-border bg-background px-8 text-base text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
+          style={{
+            fontFamily: '"Arial Narrow", Arial, sans-serif',
+            fontWeight: 700,
+            letterSpacing: "0.05em",
+          }}
+        >
+          {l}
         </div>
+      ))}
+    </div>
+  </div>
+</div>
+
       </section>
 
       <section
@@ -308,38 +378,28 @@ function HomePage() {
 
             <div className="mt-8 space-y-5 text-muted-foreground">
               <p>
-                I'm Ali Raza. Six years editing short-form video for creators
-                and brands. I've shipped over 4,000 vertical videos and watched
-                a lot of retention curves.
+            I'm Ali Raza. 6 years of video editing for multiple creators and brands. 
+            I've helped over 60 creators and brands to reach their desired goals.
               </p>
               <p>
-                My philosophy is simple: the algorithm doesn't care about your
-                edit. The viewer does. I cut for the human watching with their
-                thumb already moving.
+           I understand the algorithm and your audience mindset. And that's how my edited 
+           videos perform outstanding on your socials.
               </p>
               <p>
-                I work async, I don't ghost, and I treat your channel like it's
-                mine.
+          I always prioritize communication to keep you updated about the progress.
               </p>
             </div>
+            <a
+  href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
+  target="_blank"
+  rel="noopener noreferrer"
+className="mt-8 group inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+>
+  <span className="text-gradient-neon">Get a Quote</span>
+  <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+</a>
 
-            <div className="mt-12">
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">
-                Tools
-              </div>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {tools.map((t) => (
-                  <div
-                    key={t.name}
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-2 text-sm"
-                  >
-                    <t.icon className="h-4 w-4 text-neon" />
-                    {t.name}
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 
@@ -367,58 +427,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section
-        id="stats"
-        className="mx-auto max-w-7xl scroll-mt-28 px-6 py-20"
-      >
-        <div className="text-xs uppercase tracking-widest text-muted-foreground">
-          By the numbers
-        </div>
 
-        <h2 className="mt-2 max-w-4xl font-display text-6xl leading-[0.95] md:text-7xl">
-          The data <span className="text-gradient-neon">behind the cuts.</span>
-        </h2>
-
-        <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-4">
-{big.map((s) => (
-  <div key={s.label} className="bg-background p-6 md:p-8">
-    <div className="font-display text-5xl text-foreground">
-      {s.value}
-    </div>
-    <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">
-      {s.label}
-    </div>
-  </div>
-))}
-        </div>
-
-        <div className="mt-16 rounded-3xl border border-border bg-card p-6 md:p-8">
-          <div className="flex items-end justify-between">
-            <div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">
-                Monthly views
-              </div>
-              <div className="mt-1 font-display text-3xl">Last 12 months</div>
-            </div>
-            <div className="text-sm text-neon">+571% YoY</div>
-          </div>
-
-          <div className="mt-8 flex h-72 items-end gap-3">
-            {monthly.map((m) => (
-              <div key={m.month} className="flex h-full flex-1 flex-col justify-end gap-2">
-                <div
-                  className="rounded-t-lg bg-gradient-neon"
-                  style={{ height: `${(m.views / maxViews) * 100}%` }}
-                  title={`${m.month}: ${m.views}M`}
-                />
-                <div className="text-center text-xs text-muted-foreground">
-                  {m.month}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
