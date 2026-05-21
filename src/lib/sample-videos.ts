@@ -8,9 +8,8 @@ export const sampleVideos: VideoItem[] = [
     platform: "Reels",
     niche: "Fitness",
     poster: "oklch(0.45 0.22 340)",
-   video: "/videos/ReelforMasterclass.m4v"
+    video: "/videos/ReelforMasterclass.m4v",
   },
-
   {
     id: "v2",
     title: "Key to Success",
@@ -18,9 +17,8 @@ export const sampleVideos: VideoItem[] = [
     platform: "Reels",
     niche: "Comedy",
     poster: "oklch(0.5 0.2 200)",
-    video: "src/assets/KeytoSuccsess.m4v",
+    video: "/videos/KeytoSuccsess.m4v",
   },
-
   {
     id: "v3",
     title: "Real Estate",
@@ -28,9 +26,8 @@ export const sampleVideos: VideoItem[] = [
     platform: "Shorts",
     niche: "Finance",
     poster: "oklch(0.42 0.2 295)",
-    video: "src/assets/RealEstate.m4v",
+    video: "/videos/RealEstate.m4v",
   },
-
   {
     id: "v4",
     title: "Reel for Advisors",
@@ -38,9 +35,8 @@ export const sampleVideos: VideoItem[] = [
     platform: "TikTok",
     niche: "Lifestyle",
     poster: "oklch(0.5 0.22 25)",
-    video: "src/assets/Reelforadvisors.m4v",
+    video: "/videos/Reelforadvisors.m4v",
   },
-
   {
     id: "v5",
     title: "Hiring for Attorney",
@@ -48,9 +44,8 @@ export const sampleVideos: VideoItem[] = [
     platform: "Reels",
     niche: "Tech",
     poster: "oklch(0.55 0.18 90)",
-    video: "src/assets/HiringforAttorney.m4v",
+    video: "/videos/HiringforAttorney.m4v",
   },
-
   {
     id: "v6",
     title: "Reel for Roofing Company",
@@ -58,9 +53,8 @@ export const sampleVideos: VideoItem[] = [
     platform: "Shorts",
     niche: "Music",
     poster: "oklch(0.4 0.18 260)",
-    video: "src/assets/ReelforRoofingCompany.m4v",
+    video: "/videos/ReelforRoofingCompany.m4v",
   },
-
   {
     id: "v7",
     title: "Ad for Masterclass",
@@ -68,9 +62,8 @@ export const sampleVideos: VideoItem[] = [
     platform: "TikTok",
     niche: "Food",
     poster: "oklch(0.48 0.24 320)",
-    video: "src/assets/AdforMasterclass.m4v",
+    video: "/videos/AdforMasterclass.m4v",
   },
-
   {
     id: "v8",
     title: "Ad for Web Developer Company",
@@ -78,15 +71,15 @@ export const sampleVideos: VideoItem[] = [
     platform: "Shorts",
     niche: "Lifestyle",
     poster: "oklch(0.5 0.22 25)",
-    video: "src/assets/AdforWebDeveloperCompany.m4v",
+    video: "/videos/AdforWebDeveloperCompany.m4v",
   },
-    {
+  {
     id: "v9",
     title: "Ad for a service",
     views: "12.5M",
     platform: "Shorts",
     niche: "Lifestyle",
     poster: "oklch(0.5 0.22 25)",
-    video: "src/assets/Adforaservice.m4v",
-  }
+    video: "/videos/Adforaservice.m4v",
+  },
 ];
