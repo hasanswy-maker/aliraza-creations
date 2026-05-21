@@ -49,7 +49,6 @@ export function VideoTile({
       <video
         ref={videoRef}
         src={item.video}
-        muted
         loop
         playsInline
         preload="metadata"
