@@ -8,7 +8,7 @@ export const sampleVideos: VideoItem[] = [
     platform: "Reels",
     niche: "Fitness",
     poster: "oklch(0.45 0.22 340)",
-    video: "src/assets/ReelforMasterclass.m4v",
+   video: "/videos/ReelforMasterclass.m4v"
   },
 
   {
