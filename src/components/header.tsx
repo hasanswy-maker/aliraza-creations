@@ -22,13 +22,13 @@ export function Header() {
           <img
             src={logo}
             alt="Ali Raza Creations Logo"
-            className="h-12 w-auto object-contain"
+            className="h-12 w-12 rounded-full object-cover"
           />
 
           <span
-            className="text-xl uppercase tracking-[0.08em]"
+            className="text-2xl uppercase tracking-[0.08em]"
             style={{
-              fontFamily: '"Arial Narrow", Arial, sans-serif',
+              fontFamily: '"Bebas Neue", "Champion Gothic", "Arial Narrow", Arial, sans-serif',
               fontWeight: 700,
             }}
           >
@@ -54,11 +54,11 @@ export function Header() {
           href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
           target="_blank"
           rel="noopener noreferrer"
-          className="group hidden md:inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+          className="group hidden md:inline-flex w-fit items-center gap-2 rounded-full bg-gradient-neon px-7 py-3 font-semibold text-white transition duration-200 hover:opacity-90"
         >
-          <span className="text-gradient-neon">Get a Quote</span>
+          <span className="text-white">Get a Quote</span>
 
-          <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="h-4 w-4 text-white transition-transform group-hover:translate-x-1" />
         </a>
 
         {/* Mobile Menu Button */}
@@ -92,11 +92,11 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-semibold transition-colors hover:bg-muted"
+              className="mt-8 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-gradient-neon px-7 py-4 font-semibold text-white transition duration-200 hover:opacity-90"
             >
-              <span className="text-gradient-neon">Get a Quote</span>
+              <span className="text-white">Get a Quote</span>
 
-              <ArrowRight className="h-4 w-4 text-[#ff2bd6]" />
+              <ArrowRight className="h-4 w-4 text-white" />
             </a>
           </nav>
         </div>

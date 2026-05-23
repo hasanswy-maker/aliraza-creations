@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -66,42 +66,49 @@
   --popover: oklch(0.17 0.015 285);
   --popover-foreground: oklch(0.97 0.005 285);
 
-  --neon: oklch(0.72 0.27 340);
-  --neon-glow: oklch(0.78 0.28 340);
+  --neon: #ffd200;
+  --neon-glow: #f5b800;
 
-  --primary: oklch(0.72 0.27 340);
+  --primary: oklch(0.74 0.22 305);
   --primary-foreground: oklch(0.13 0.012 285);
   --secondary: oklch(0.22 0.02 285);
   --secondary-foreground: oklch(0.97 0.005 285);
   --muted: oklch(0.22 0.02 285);
   --muted-foreground: oklch(0.68 0.02 285);
-  --accent: oklch(0.78 0.22 200);
+  --accent: oklch(0.48 0.21 295);
   --accent-foreground: oklch(0.13 0.012 285);
   --destructive: oklch(0.65 0.24 25);
   --destructive-foreground: oklch(0.97 0.005 285);
   --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.72 0.27 340 / 60%);
+  --ring: rgba(245, 184, 0, 0.6);
 
-  --chart-1: oklch(0.72 0.27 340);
-  --chart-2: oklch(0.78 0.22 200);
+  --chart-1: oklch(0.74 0.22 305);
+  --chart-2: oklch(0.62 0.24 300);
   --chart-3: oklch(0.82 0.2 90);
   --chart-4: oklch(0.65 0.25 295);
   --chart-5: oklch(0.7 0.22 25);
 
   --sidebar: oklch(0.15 0.012 285);
   --sidebar-foreground: oklch(0.97 0.005 285);
-  --sidebar-primary: oklch(0.72 0.27 340);
+  --sidebar-primary: oklch(0.74 0.22 305);
   --sidebar-primary-foreground: oklch(0.13 0.012 285);
-  --sidebar-accent: oklch(0.22 0.02 285);
+  --sidebar-accent: oklch(0.48 0.21 295);
   --sidebar-accent-foreground: oklch(0.97 0.005 285);
   --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.72 0.27 340 / 60%);
+  --sidebar-ring: oklch(0.74 0.22 305 / 60%);
 
-  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.72 0.27 340 / 0.25), transparent 60%),
-                   radial-gradient(ellipse 60% 50% at 80% 100%, oklch(0.78 0.22 200 / 0.18), transparent 60%);
-  --gradient-neon: linear-gradient(135deg, var(--neon), var(--neon-glow));
-  --shadow-neon: 0 0 40px -8px oklch(0.72 0.27 340 / 0.6);
+  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.74 0.22 305 / 0.25), transparent 60%),
+                   radial-gradient(ellipse 60% 50% at 80% 100%, oklch(0.62 0.24 300 / 0.18), transparent 60%);
+  --gradient-neon: linear-gradient(
+    135deg,
+    #fff3a0 0%,
+    #ffd200 25%,
+    #f5b800 55%,
+    #e0a000 75%,
+    #c98a00 100%
+  );
+  --shadow-neon: 0 0 40px -8px rgba(255, 210, 0, 0.6);
   --shadow-elevated: 0 20px 60px -20px oklch(0 0 0 / 0.6);
 }
 
@@ -137,6 +144,9 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+  .bg-gradient-neon {
+    background: var(--gradient-neon);
   }
   .shadow-neon { box-shadow: var(--shadow-neon); }
   .bg-gradient-hero { background-image: var(--gradient-hero); }

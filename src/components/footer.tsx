@@ -10,7 +10,7 @@ export function Footer() {
           <img
             src={profileImage}
             alt="Ali Raza"
-            className="h-16 w-16 rounded-full border border-border object-cover"
+            className="h-35 w-35 rounded-full border border-border object-cover"
           />
 
           <div>

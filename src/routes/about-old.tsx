@@ -32,7 +32,7 @@ function AboutPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
       <div className="grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
-        <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-neon/30 via-accent/20 to-surface shadow-elevated">
+        <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-neon/30 via-neon/20 to-surface shadow-elevated">
           <div className="absolute inset-0 grid place-items-center font-display text-9xl text-foreground/10">AR</div>
         </div>
         <div>

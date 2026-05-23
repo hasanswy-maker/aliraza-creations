@@ -181,14 +181,14 @@ function HomePage() {
 <h1
   className="mt-4 text-7xl leading-[0.88] uppercase md:text-8xl lg:text-9xl"
   style={{
-    fontFamily: '"Arial Narrow", Arial, sans-serif',
-    letterSpacing: "-0.03em",
+    fontFamily: 'Bebas Neue',
+    letterSpacing: "-0.0005em",
     fontWeight: 700,
   }}
 >
   We edit shorts
   <br />
-  that hit <span className="text-gradient-neon">millions.</span>
+  that hit <span className="text-gradient-neon">millions</span>
 </h1>
 
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
@@ -204,10 +204,10 @@ function HomePage() {
   href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
   target="_blank"
   rel="noopener noreferrer"
-  className="group inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+  className="group inline-flex w-fit items-center gap-2 rounded-full bg-gradient-neon px-7 py-3 font-semibold text-white transition duration-200 hover:opacity-90"
 >
-  <span className="text-gradient-neon">Get a Quote</span>
-  <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+  <span className="text-white">Get a Quote</span>
+  <ArrowRight className="h-4 w-4 text-white transition-transform group-hover:translate-x-1" />
 </a>
           </div>
         </div>
@@ -235,21 +235,21 @@ function HomePage() {
   </div>
 
  <div className="mt-2 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-    <h2 className="font-display text-6xl leading-[0.9] md:text-7xl">
-      Selected cuts.
-      <br />
-      <span className="text-gradient-neon">Real numbers.</span>
+    <h2 className="font-display text-6xl leading-[1.05] md:text-7xl">
+      SELECTED CUTS
+      <br />  
+      <span className="text-gradient-neon">REAL NUMBERS</span>
     </h2>
 
     <a
       href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex h-fit items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+      className="group inline-flex w-fit items-center gap-2 rounded-full bg-gradient-neon px-7 py-3 font-semibold text-white transition duration-200 hover:opacity-90"
     >
-      <span className="text-gradient-neon">Get a Quote</span>
+      <span className="text-white">Get a Quote</span>
 
-      <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+      <ArrowRight className="h-4 w-4 text-white transition-transform group-hover:translate-x-1" />
     </a>
   </div>
 
@@ -273,10 +273,10 @@ function HomePage() {
         </div>
 
 <div className="mt-2 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-  <h2 className="max-w-4xl font-display text-6xl leading-[0.95] md:text-7xl">
-    Receipts from{" "}
+  <h2 className="max-w-4xl font-display text-6xl leading-[1.05] md:text-7xl">
+    RECEIPTS FROM{" "}
     <span className="text-gradient-neon">
-      the people I edit for.
+      THE PEOPLE I EDIT FOR
     </span>
   </h2>
 
@@ -284,11 +284,11 @@ function HomePage() {
     href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
     target="_blank"
     rel="noopener noreferrer"
-    className="group inline-flex h-fit items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+    className="group inline-flex w-fit items-center gap-2 rounded-full bg-gradient-neon px-7 py-3 font-semibold text-white transition duration-200 hover:opacity-90"
   >
-    <span className="text-gradient-neon">Get a Quote</span>
+    <span className="text-white">Get a Quote</span>
 
-    <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+    <ArrowRight className="h-4 w-4 text-white transition-transform group-hover:translate-x-1" />
   </a>
 </div>
 
@@ -319,15 +319,15 @@ function HomePage() {
 
 <div className="mt-24">
   <h2
-className="mt-2 text-4xl leading-tight"
+className="mt-2 text-5xl leading-tight md:text-6xl"
     style={{
-      fontFamily: '"Arial Narrow", Arial, sans-serif',
+      fontFamily: '"Bebas Neue", Arial, sans-serif',
       fontWeight: 700,
-      letterSpacing: "-0.03em",
+      letterSpacing: "-0.000005em",
     }}
   >
-    <span className="text-gradient-neon">Creators</span> and{" "}
-    <span className="text-gradient-neon">Brands</span> I've worked with
+    <span className="text-gradient-neon">CREATORS</span> AND{" "}
+    <span className="text-gradient-neon">BRANDS</span> I'VE WORKED WITH
   </h2>
 
   <div className="relative mt-8 overflow-hidden rounded-2xl border border-border bg-border">
@@ -359,7 +359,7 @@ className="mt-2 text-4xl leading-tight"
         className="mx-auto max-w-6xl scroll-mt-28 px-6 py-20"
       >
         <div className="grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-neon/30 via-accent/20 to-surface shadow-elevated">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-neon/30 via-neon/20 to-surface shadow-elevated">
             <div className="absolute inset-0 grid place-items-center font-display text-9xl text-foreground/10">
               AR
             </div>
@@ -370,10 +370,10 @@ className="mt-2 text-4xl leading-tight"
               About
             </div>
 
-            <h2 className="mt-2 font-display text-5xl leading-[0.95] md:text-6xl">
-              I make the{" "}
-              <span className="text-gradient-neon">first 1.5 seconds</span>{" "}
-              impossible to scroll past.
+            <h2 className="mt-2 font-display text-5xl leading-[1.05] md:text-6xl">
+              I MAKE THE{" "}
+              <span className="text-gradient-neon">FIRST 1.5 SECONDS</span>{" "}
+              IMPOSSIBLE TO SCROLL PAST.
             </h2>
 
             <div className="mt-8 space-y-5 text-muted-foreground">
@@ -393,10 +393,10 @@ className="mt-2 text-4xl leading-tight"
   href="https://wa.me/923486356131?text=%F0%9F%91%8B%20Hi%20Ali,%20I%20would%20like%20to%20discuss%20my%20project%20with%20you"
   target="_blank"
   rel="noopener noreferrer"
-className="mt-8 group inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:bg-muted"
+  className="group mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-neon px-7 py-3 font-semibold text-white transition duration-200 hover:opacity-90"
 >
-  <span className="text-gradient-neon">Get a Quote</span>
-  <ArrowRight className="h-4 w-4 text-[#ff2bd6] transition-transform group-hover:translate-x-1" />
+  <span className="text-white">Get a Quote</span>
+  <ArrowRight className="h-4 w-4 text-white transition-transform group-hover:translate-x-1" />
 </a>
 
 
@@ -408,9 +408,9 @@ className="mt-8 group inline-flex items-center gap-2 rounded-full border border-
             Process
           </div>
 
-          <h2 className="mt-2 font-display text-5xl">How it goes.</h2>
+          <h2 className="mt-2 font-display text-5xl">HOW IT GOES</h2>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {steps.map((s) => (
               <div
                 key={s.n}

@@ -174,7 +174,7 @@ function HomePage() {
       {/* ABOUT */}
       <section id="about" className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-[1fr_1.4fr] md:gap-20">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-neon/30 via-accent/20 to-surface shadow-elevated">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-neon/30 via-neon/20 to-surface shadow-elevated">
             <div className="absolute inset-0 grid place-items-center font-display text-9xl text-foreground/10">
               AR
             </div>
@@ -364,12 +364,12 @@ function HomePage() {
                   <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
                     <stop
                       offset="0%"
-                      stopColor="oklch(0.72 0.27 340)"
+                      stopColor="oklch(0.74 0.22 305)"
                       stopOpacity={0.7}
                     />
                     <stop
                       offset="100%"
-                      stopColor="oklch(0.72 0.27 340)"
+                      stopColor="oklch(0.62 0.24 300)"
                       stopOpacity={0}
                     />
                   </linearGradient>
@@ -398,7 +398,7 @@ function HomePage() {
                     color: "oklch(0.97 0.005 285)",
                   }}
                   cursor={{
-                    stroke: "oklch(0.72 0.27 340)",
+                    stroke: "oklch(0.74 0.22 305)",
                     strokeWidth: 1,
                   }}
                 />
@@ -406,7 +406,7 @@ function HomePage() {
                 <Area
                   type="monotone"
                   dataKey="views"
-                  stroke="oklch(0.78 0.28 340)"
+                  stroke="oklch(0.62 0.24 300)"
                   strokeWidth={2.5}
                   fill="url(#g)"
                 />
